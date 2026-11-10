@@ -1,0 +1,7 @@
+{
+  "name": "ezkielyna-api-node-examples",
+  "private": true,
+  "type": "module",
+  "scripts": { "chat": "node chat.mjs", "stream": "node stream.mjs" },
+  "dependencies": { "dotenv": "^16.4.5", "openai": "^4.67.0" }
+}
