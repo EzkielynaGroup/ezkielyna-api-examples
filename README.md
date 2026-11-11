@@ -28,6 +28,10 @@ Copy `.env.example` to `.env` and paste your key. Never commit `.env`.
 | [`python/`](python) | `openai` Python SDK: chat, streaming, model list; `anthropic` SDK through the Anthropic endpoint |
 | [`node/`](node) | `openai` npm package: chat and streaming |
 | [`claude-code/`](claude-code) | `~/.claude/settings.json` to run Claude Code on Ezkielyna API |
+| [`n8n/`](n8n) | n8n credential setup and an importable HTTP Request workflow |
+| [`cline/`](cline) | Cline, Roo Code and Kilo Code provider settings |
+| [`cursor/`](cursor) | Cursor custom OpenAI key and base URL |
+| [`open-webui/`](open-webui) | Open WebUI connection and a LibreChat custom endpoint |
 
 ```bash
 # curl

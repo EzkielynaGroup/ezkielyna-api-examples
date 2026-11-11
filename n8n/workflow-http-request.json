@@ -1,0 +1,51 @@
+{
+  "name": "Ezkielyna API - chat (HTTP Request)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "6f1d6a8e-0001-4c55-9a11-000000000001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            { "id": "a1", "name": "text", "value": "Write a two-line product description for an iced coffee.", "type": "string" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6f1d6a8e-0002-4c55-9a11-000000000002",
+      "name": "Set prompt",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [220, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.ezkielyna.store/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: 'deepseek-v4.1-flash', messages: [{ role: 'user', content: $json.text }] }) }}",
+        "options": {}
+      },
+      "id": "6f1d6a8e-0003-4c55-9a11-000000000003",
+      "name": "Ezkielyna chat",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [440, 0],
+      "credentials": { "httpHeaderAuth": { "id": "", "name": "Ezkielyna" } }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": { "main": [[{ "node": "Set prompt", "type": "main", "index": 0 }]] },
+    "Set prompt": { "main": [[{ "node": "Ezkielyna chat", "type": "main", "index": 0 }]] }
+  },
+  "settings": {}
+}

@@ -1,0 +1,11 @@
+# Excerpt for librechat.yaml; keep the key in .env as EZK_API_KEY
+endpoints:
+  custom:
+    - name: "Ezkielyna"
+      apiKey: "${EZK_API_KEY}"
+      baseURL: "https://api.ezkielyna.store/v1"
+      models:
+        default: ["deepseek-v4.1-flash", "glm-5.3", "kimi-k2.7"]
+        fetch: false
+      titleConvo: true
+      titleModel: "deepseek-v4.1-flash"
