@@ -1,0 +1,18 @@
+# ~/.continue/config.yaml (Windows: %USERPROFILE%\.continue\config.yaml)
+# Key: put EZKIELYNA_API_KEY=sk-... in ~/.continue/.env (IDE extensions do not read shell variables).
+name: Ezkielyna
+version: 0.0.1
+schema: v1
+models:
+  - name: DeepSeek V4.1 Flash (Ezkielyna)
+    provider: openai
+    model: deepseek-v4.1-flash
+    apiBase: https://api.ezkielyna.store/v1
+    apiKey: ${{ secrets.EZKIELYNA_API_KEY }}
+    roles: [chat, edit, apply, summarize]
+  - name: GLM 5.3 (Ezkielyna)
+    provider: openai
+    model: glm-5.3
+    apiBase: https://api.ezkielyna.store/v1
+    apiKey: ${{ secrets.EZKIELYNA_API_KEY }}
+    roles: [chat, edit, apply]

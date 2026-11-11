@@ -10,7 +10,7 @@ Copy-paste examples for **[Ezkielyna API](https://api.ezkielyna.store)**: one AP
 | Anthropic-compatible base URL (Claude Code, Anthropic SDK) | `https://api.ezkielyna.store` (no `/v1`) |
 | Model list + live prices | [ezkielyna.store/models](https://ezkielyna.store/models) |
 | Status | [api.ezkielyna.store/status](https://api.ezkielyna.store/status) |
-| Setup guides (Cursor, Cline, n8n, …) | [ezkielyna.store/panduan](https://ezkielyna.store/panduan) |
+| Setup guides (Cursor, Cline, OpenCode, n8n, …) | [ezkielyna.store/panduan](https://ezkielyna.store/panduan) |
 
 ## 1. Get a key
 1. Buy API Credit at [ezkielyna.store/api-credit](https://ezkielyna.store/api-credit). You get a redeem code on the order page.
@@ -32,6 +32,14 @@ Copy `.env.example` to `.env` and paste your key. Never commit `.env`.
 | [`cline/`](cline) | Cline, Roo Code and Kilo Code provider settings |
 | [`cursor/`](cursor) | Cursor custom OpenAI key and base URL |
 | [`open-webui/`](open-webui) | Open WebUI connection and a LibreChat custom endpoint |
+| [`opencode/`](opencode) | `opencode.json` custom OpenAI-compatible provider |
+| [`hermes-agent/`](hermes-agent) | Hermes Agent custom endpoint (`hermes model` or `config.yaml`) |
+| [`continue/`](continue) | Continue `config.yaml` for VS Code / JetBrains |
+| [`laravel-php/`](laravel-php) | plain PHP cURL and a Laravel HTTP client service |
+| [`google-sheets/`](google-sheets) | Apps Script custom function `=EZK()` for Google Sheets |
+| [`dify/`](dify) | Dify OpenAI-API-compatible model plugin fields |
+| [`cherry-studio/`](cherry-studio) | Cherry Studio custom provider |
+| [`chatbox/`](chatbox) | Chatbox OpenAI-compatible provider |
 
 ```bash
 # curl
@@ -66,6 +74,8 @@ Contoh kode siap pakai untuk Ezkielyna API: satu API key untuk 100+ model AI, ko
 1. Beli API Credit di [ezkielyna.store/api-credit](https://ezkielyna.store/api-credit). Panduan bayar: [bayar API AI pakai DANA/GoPay](https://ezkielyna.store/panduan/bayar-api-ai-qris-dana-gopay).
 2. Tukarkan kode redeem di menu **Wallet** api.ezkielyna.store, lalu buat key di **API Keys** (grup **Auto** paling mudah).
 3. Salin `.env.example` menjadi `.env`, isi key, lalu jalankan salah satu contoh di atas.
+
+Ada juga contoh untuk OpenCode, Hermes Agent, Continue, PHP/Laravel, Google Sheets, Dify, Cherry Studio dan Chatbox (lihat tabel di atas). Starter bot AI Telegram + WhatsApp: [EzkielynaGroup/bot-wa-ai-starter](https://github.com/EzkielynaGroup/bot-wa-ai-starter).
 
 Harga live per 1 juta token dalam Rupiah: [ezkielyna.store/harga-api-ai](https://ezkielyna.store/harga-api-ai). Panduan Claude Code dengan saldo QRIS: [ezkielyna.store/panduan/claude-code-murah-qris](https://ezkielyna.store/panduan/claude-code-murah-qris).
 

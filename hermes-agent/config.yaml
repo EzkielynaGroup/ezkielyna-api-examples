@@ -1,0 +1,11 @@
+# ~/.hermes/config.yaml (merge into your existing file). The key goes in ~/.hermes/.env:
+#   EZKIELYNA_API_KEY=sk-...
+providers:
+  ezkielyna:
+    api: https://api.ezkielyna.store/v1
+    key_env: EZKIELYNA_API_KEY
+    transport: chat_completions
+
+model:
+  default: deepseek-v4.1-flash
+  provider: custom:ezkielyna
